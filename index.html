@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dhan श्री Boutique — Designer Ethnic Wear & Bespoke Couture, Surat</title>
+<meta name="description" content="Designer chaniya choli, lehengas, blouses and bespoke tailoring & alterations at The Boulevard Hub, Pal, Surat.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#f6f0e6;--cream:#ede3d2;--ink:#1a1210;--maroon:#5e1420;--gold:#b08a4a;--gold2:#d8b878;--muted:#7a6a5c;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--ivory);color:var(--ink);font-family:var(--sans);font-weight:300;overflow-x:clip}
+body{overflow-x:clip}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--maroon);color:var(--ivory)}
+.wrap{padding:0 clamp(16px,4vw,64px)}
+.eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:.95}
+h2{font-size:clamp(44px,7vw,120px);letter-spacing:-.02em}
+h2 em,h1 em{font-style:italic;color:var(--maroon)}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 30px;border:1px solid currentColor;border-radius:99px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;position:relative;overflow:hidden;transition:color .5s}
+.btn::before{content:"";position:absolute;inset:0;background:var(--ink);transform:translateY(101%);transition:transform .5s cubic-bezier(.7,0,.2,1);z-index:-1}
+.btn:hover{color:var(--ivory)}.btn:hover::before{transform:none}
+.btn.solid{background:var(--maroon);border-color:var(--maroon);color:var(--ivory)}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* preloader */
+#pre{position:fixed;inset:0;z-index:100;background:var(--ink);color:var(--ivory);display:grid;place-items:center}
+#pre .mark{font-family:var(--serif);font-size:clamp(48px,9vw,140px);overflow:hidden}
+#pre .mark span{display:inline-block;transform:translateY(110%)}
+#pre .count{position:absolute;bottom:32px;right:clamp(16px,4vw,64px);font-family:var(--serif);font-size:20px;color:var(--gold2)}
+#pre .bar{position:absolute;bottom:0;left:0;height:2px;background:var(--gold);width:0}
+
+/* cursor */
+#cur{position:fixed;top:0;left:0;width:10px;height:10px;border-radius:50%;background:var(--maroon);pointer-events:none;z-index:95;transform:translate(-50%,-50%);transition:width .3s,height .3s,background .3s;mix-blend-mode:normal;display:grid;place-items:center;font-size:10px;letter-spacing:.2em;color:var(--ivory);text-transform:uppercase}
+#cur.big{width:90px;height:90px;background:rgba(94,20,32,.92)}
+@media(hover:none){#cur{display:none}}
+
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:22px clamp(16px,4vw,64px);transition:transform .5s,background .5s}
+header.scrolled{background:rgba(246,240,230,.85);backdrop-filter:blur(14px);padding-top:14px;padding-bottom:14px}
+header.hide{transform:translateY(-100%)}
+.logo{font-family:var(--serif);font-size:28px;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
+.logo img{width:38px;height:38px;border-radius:50%}
+.logo small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold)}
+.navr{display:flex;gap:8px;align-items:center}
+.ico{width:46px;height:46px;border-radius:50%;border:1px solid rgba(26,18,16,.2);display:grid;place-items:center;transition:background .3s}
+.ico:hover{background:var(--cream)}
+.ico svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.4}
+.menuBtn{display:flex;gap:12px;align-items:center;font-size:12px;letter-spacing:.25em;text-transform:uppercase;padding-left:10px}
+.burger{width:28px;display:grid;gap:6px}.burger i{height:1px;background:currentColor;display:block;transition:transform .4s}
+.navlinks{display:flex;gap:32px;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+.navlinks a{position:relative}.navlinks a::after{content:"";position:absolute;left:0;bottom:-4px;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .4s}
+.navlinks a:hover::after{transform:scaleX(1);transform-origin:left}
+@media(max-width:900px){.navlinks{display:none}}
+
+/* menu overlay */
+#menu{position:fixed;inset:0;z-index:60;background:var(--maroon);color:var(--ivory);clip-path:circle(0% at calc(100% - 60px) 44px);transition:clip-path .9s cubic-bezier(.7,0,.2,1);display:grid;grid-template-columns:1.3fr 1fr}
+#menu.open{clip-path:circle(150% at calc(100% - 60px) 44px)}
+#menu nav{padding:120px clamp(16px,6vw,96px);display:flex;flex-direction:column;justify-content:center;gap:4px}
+#menu nav a{font-family:var(--serif);font-size:clamp(40px,6.5vw,96px);line-height:1.05;display:flex;align-items:baseline;gap:20px;opacity:0;transform:translateY(40px);transition:color .3s}
+#menu nav a sup{font-family:var(--sans);font-size:12px;color:var(--gold2)}
+#menu nav a:hover{color:var(--gold2);font-style:italic}
+#menu .side{position:relative;overflow:hidden}
+#menu .side img{position:absolute;inset:0;opacity:.85;transition:opacity .5s}
+#menu .info{position:absolute;bottom:40px;left:clamp(16px,6vw,96px);font-size:13px;letter-spacing:.06em;line-height:1.9;opacity:.8}
+#menuClose{position:absolute;top:22px;right:clamp(16px,4vw,64px);z-index:2;border-color:rgba(255,255,255,.3)}
+@media(max-width:800px){#menu{grid-template-columns:1fr}#menu .side{display:none}}
+
+/* search */
+#search{position:fixed;inset:0;z-index:70;background:rgba(246,240,230,.97);backdrop-filter:blur(10px);padding:110px clamp(16px,6vw,96px) 40px;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s;overflow:auto}
+#search.open{opacity:1;visibility:visible}
+#search input{width:100%;font-family:var(--serif);font-size:clamp(34px,6vw,80px);font-weight:300;border:0;border-bottom:1px solid var(--ink);background:none;outline:none;padding:10px 0;color:var(--ink)}
+#search .tags{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+#search .tags button{border:1px solid rgba(26,18,16,.25);padding:8px 16px;border-radius:99px;font-size:12px;letter-spacing:.1em}
+#search .tags button:hover{background:var(--ink);color:var(--ivory)}
+#sres{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:20px;margin-top:20px}
+#sres a{display:block}#sres .im{aspect-ratio:3/4;overflow:hidden;background:var(--cream)}
+#sres p{font-family:var(--serif);font-size:20px;margin-top:8px}#sres small{color:var(--muted);font-size:11px;letter-spacing:.15em;text-transform:uppercase}
+#searchClose{position:absolute;top:22px;right:clamp(16px,4vw,64px)}
+
+/* hero */
+.hero{min-height:100svh;display:grid;grid-template-columns:1.1fr .9fr;align-items:end;gap:4vw;padding-top:120px;padding-bottom:6vh}
+.hero h1{font-size:clamp(64px,12vw,210px);letter-spacing:-.035em}
+.hero h1 .ln{display:block;overflow:hidden}.hero h1 .ln>span{display:inline-block;transform:translateY(105%)}
+.hero .dev{font-family:var(--serif);color:var(--gold)}
+.hero p.lead{max-width:420px;font-size:16px;line-height:1.7;color:var(--muted);margin:32px 0}
+.heroimg{position:relative;height:78vh;clip-path:inset(100% 0 0 0);border-radius:240px 240px 0 0;overflow:hidden}
+.heroimg img{transform:scale(1.25)}
+.badge{position:absolute;left:-56px;bottom:60px;width:130px;height:130px;z-index:3}
+.badge svg{animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero .meta{display:flex;gap:28px;margin-top:40px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.hero .meta b{display:block;font-family:var(--serif);font-size:34px;font-weight:300;color:var(--ink);letter-spacing:0}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.heroimg{height:60vh}.badge{left:auto;right:10px;bottom:-40px}}
+
+/* marquee */
+.marq{border-top:1px solid rgba(26,18,16,.15);border-bottom:1px solid rgba(26,18,16,.15);overflow:hidden;padding:22px 0;white-space:nowrap}
+.marq .tr{display:inline-flex;gap:48px;animation:mq 30s linear infinite;font-family:var(--serif);font-size:clamp(28px,4vw,56px);font-style:italic}
+.marq .tr span::after{content:"✦";font-style:normal;color:var(--gold);font-size:.5em;margin-left:48px;vertical-align:middle}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:clamp(80px,13vw,180px) 0}
+.intro{display:grid;grid-template-columns:1fr 1.4fr;gap:6vw}
+.intro .big{font-family:var(--serif);font-size:clamp(28px,3.6vw,56px);line-height:1.15}
+.intro .big .w{opacity:.15}
+.intro .side p{color:var(--muted);line-height:1.8;margin-top:24px;max-width:340px}
+@media(max-width:900px){.intro{grid-template-columns:1fr}}
+
+/* collection */
+.colhead{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:24px;margin-bottom:56px}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.filters button{padding:10px 18px;border-radius:99px;border:1px solid rgba(26,18,16,.2);font-size:11px;letter-spacing:.18em;text-transform:uppercase;transition:.3s}
+.filters button.on,.filters button:hover{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,2vw,28px)}
+.grid .card:nth-child(4n+2),.grid .card:nth-child(4n+4){margin-top:80px}
+.card{cursor:pointer}
+.card .im{aspect-ratio:3/4.6;overflow:hidden;position:relative;background:var(--cream)}
+.card .im img{transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.card:hover .im img{transform:scale(1.08)}
+.card .tag{position:absolute;top:14px;left:14px;background:var(--ivory);padding:6px 12px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;border-radius:99px}
+.card .q{position:absolute;left:14px;right:14px;bottom:14px;background:var(--ink);color:var(--ivory);text-align:center;padding:14px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;transform:translateY(130%);transition:transform .5s cubic-bezier(.7,0,.2,1)}
+.card:hover .q{transform:none}
+.card h3{font-size:26px;margin-top:16px}
+.card small{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.card.hid{display:none}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.grid .card:nth-child(n){margin-top:0}.grid .card:nth-child(2n){margin-top:40px}}
+
+/* horizontal lookbook */
+.hz{background:var(--ink);color:var(--ivory);padding:0;overflow:hidden}
+.hz .track{display:flex;gap:4vw;height:100svh;align-items:center;padding:0 6vw;width:max-content}
+.hz .first{width:min(560px,80vw);flex:none}
+.hz .first h2 em{color:var(--gold2)}
+.hz .first p{color:#b9ab99;line-height:1.8;margin-top:24px;max-width:380px}
+.hz .slide{flex:none;width:min(420px,72vw);height:72vh;position:relative;overflow:hidden}
+.hz .slide:nth-child(odd){height:60vh;align-self:flex-end;margin-bottom:8vh}
+.hz .slide img{transform:scale(1.2)}
+.hz .slide span{position:absolute;bottom:18px;left:18px;font-family:var(--serif);font-size:30px;font-style:italic}
+.hz .slide b{position:absolute;top:18px;right:18px;font-weight:300;font-size:12px;letter-spacing:.2em;color:var(--gold2)}
+.hz .progress{position:absolute;bottom:30px;left:6vw;right:6vw;height:1px;background:rgba(255,255,255,.15)}
+.hz .progress i{display:block;height:100%;width:0;background:var(--gold)}
+
+/* bespoke */
+.bespoke{background:var(--cream)}
+.bsgrid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start}
+.bsimg{position:sticky;top:110px;height:80vh;overflow:hidden;border-radius:0 0 260px 260px}
+.steps{margin-top:56px;border-top:1px solid rgba(26,18,16,.2)}
+.step{display:grid;grid-template-columns:70px 1fr;gap:20px;padding:36px 0;border-bottom:1px solid rgba(26,18,16,.2)}
+.step .n{font-family:var(--serif);font-size:44px;color:var(--gold);line-height:1}
+.step h3{font-size:34px;margin-bottom:10px}
+.step p{color:var(--muted);line-height:1.75}
+@media(max-width:900px){.bsgrid{grid-template-columns:1fr}.bsimg{position:relative;top:0;height:60vh}}
+
+/* alterations */
+.alt h2{text-align:center}
+.alt .sub{text-align:center;color:var(--muted);max-width:560px;margin:24px auto 64px;line-height:1.8}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(26,18,16,.18)}
+.svc>div{padding:44px 32px;border-bottom:1px solid rgba(26,18,16,.18);border-right:1px solid rgba(26,18,16,.18);position:relative;overflow:hidden;transition:color .5s}
+.svc>div:nth-child(3n){border-right:0}
+.svc>div::before{content:"";position:absolute;inset:0;background:var(--maroon);transform:scaleY(0);transform-origin:bottom;transition:transform .6s cubic-bezier(.7,0,.2,1);z-index:-1}
+.svc>div:hover{color:var(--ivory)}.svc>div:hover::before{transform:none}
+.svc>div:hover p{color:#e8d7c6}
+.svc>div{z-index:0}
+.svc i{font-style:normal;font-size:11px;letter-spacing:.25em;color:var(--gold)}
+.svc h3{font-size:32px;margin:18px 0 12px}
+.svc p{color:var(--muted);line-height:1.7;font-size:15px;transition:color .5s}
+@media(max-width:900px){.svc{grid-template-columns:1fr}.svc>div{border-right:0}}
+
+/* appointment */
+.book{background:var(--maroon);color:var(--ivory)}
+.book .in{display:grid;grid-template-columns:1fr 1fr;gap:6vw}
+.book h2 em{color:var(--gold2)}
+.book p{color:#e3cfc0;line-height:1.8;margin-top:24px;max-width:420px}
+form{display:grid;gap:18px}
+.f{position:relative}
+.f input,.f select,.f textarea{width:100%;background:none;border:0;border-bottom:1px solid rgba(246,240,230,.35);color:var(--ivory);font:inherit;font-size:17px;padding:22px 0 10px;outline:none}
+.f select option{color:var(--ink)}
+.f label{position:absolute;left:0;top:22px;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:#d9bfae;transition:.3s;pointer-events:none}
+.f input:focus+label,.f input:not(:placeholder-shown)+label,.f textarea:focus+label,.f textarea:not(:placeholder-shown)+label{top:0;font-size:10px;color:var(--gold2)}
+.f .fixed{top:0;font-size:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chips input{display:none}
+.chips label{position:static;border:1px solid rgba(246,240,230,.35);padding:9px 16px;border-radius:99px;font-size:12px;letter-spacing:.1em;cursor:pointer;color:var(--ivory);text-transform:none}
+.chips input:checked+label{background:var(--ivory);color:var(--maroon)}
+.book .btn{border-color:var(--ivory);margin-top:10px;justify-self:start}
+.book .btn::before{background:var(--ivory)}.book .btn:hover{color:var(--maroon)}
+@media(max-width:900px){.book .in{grid-template-columns:1fr}}
+
+/* review */
+.rev{text-align:center}
+.rev blockquote{font-family:var(--serif);font-size:clamp(30px,4.4vw,68px);line-height:1.12;max-width:1100px;margin:30px auto;font-weight:300}
+.rev .stars{color:var(--gold);letter-spacing:.3em}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:4vw;align-items:stretch}
+.visit .map{min-height:420px;filter:grayscale(.5) sepia(.25)}
+.visit .map iframe{width:100%;height:100%;border:0}
+.visit dl{margin-top:40px;display:grid;gap:26px}
+.visit dt{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold)}
+.visit dd{font-family:var(--serif);font-size:26px;margin-top:6px}
+@media(max-width:900px){.visit{grid-template-columns:1fr}}
+
+footer{background:var(--ink);color:var(--ivory);padding:100px 0 30px;overflow:hidden}
+footer .huge{font-family:var(--serif);font-size:clamp(70px,17vw,300px);line-height:.85;letter-spacing:-.04em;white-space:nowrap}
+footer .huge em{color:var(--gold)}
+footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-top:60px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#a99}
+
+.wa{position:fixed;right:20px;bottom:20px;z-index:40;width:58px;height:58px;border-radius:50%;background:#1f8f4e;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.25);transition:transform .3s}
+.wa:hover{transform:scale(1.08)}.wa svg{width:28px;fill:#fff}
+
+/* product modal */
+#pm{position:fixed;inset:0;z-index:80;background:rgba(26,18,16,.6);display:grid;place-items:center;opacity:0;visibility:hidden;transition:.4s;padding:16px}
+#pm.open{opacity:1;visibility:visible}
+#pm .box{background:var(--ivory);width:min(900px,100%);max-height:90vh;overflow:auto;display:grid;grid-template-columns:1fr 1fr;transform:translateY(30px);transition:transform .5s}
+#pm.open .box{transform:none}
+#pm .box .im{min-height:480px}
+#pm .box .tx{padding:44px;display:flex;flex-direction:column;gap:18px;position:relative}
+#pm h3{font-size:44px}#pm p{color:var(--muted);line-height:1.8}
+#pm .x{position:absolute;top:14px;right:14px}
+#pm ul{list-style:none;font-size:13px;letter-spacing:.06em;display:grid;gap:8px}
+#pm ul li::before{content:"✦ ";color:var(--gold)}
+@media(max-width:700px){#pm .box{grid-template-columns:1fr}#pm .box .im{min-height:340px}}
+.rv{opacity:0;transform:translateY(50px)}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<div id="cur"></div>
+
+<div id="pre"><div class="mark"><span>Dhan</span> <span style="color:var(--gold2)">श्री</span></div><div class="count">000</div><div class="bar"></div></div>
+
+<header id="hd">
+  <a href="#top" class="logo"><img src="img/i1.jpg" alt=""><span>Dhan श्री<small>Boutique · Surat</small></span></a>
+  <nav class="navlinks"><a href="#collection">Collection</a><a href="#bespoke">Bespoke</a><a href="#alterations">Alterations</a><a href="#visit">Visit</a></nav>
+  <div class="navr">
+    <button class="ico" id="sOpen" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></button>
+    <button class="menuBtn" id="mOpen" aria-label="Open menu"><span>Menu</span><span class="burger"><i></i><i></i></span></button>
+  </div>
+</header>
+
+<div id="menu" aria-hidden="true">
+  <button class="ico" id="menuClose" aria-label="Close menu"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+  <nav>
+    <a href="#top" data-img="img/i4.jpg"><sup>01</sup>Home</a>
+    <a href="#collection" data-img="img/i6.jpg"><sup>02</sup>Collection</a>
+    <a href="#lookbook" data-img="img/i10.jpg"><sup>03</sup>Lookbook</a>
+    <a href="#bespoke" data-img="img/i3.jpg"><sup>04</sup>Bespoke Couture</a>
+    <a href="#alterations" data-img="img/i8.jpg"><sup>05</sup>Alterations</a>
+    <a href="#book" data-img="img/i9.jpg"><sup>06</sup>Book a Fitting</a>
+    <a href="#visit" data-img="img/i11.jpg"><sup>07</sup>Visit the Atelier</a>
+  </nav>
+  <div class="side"><img id="mImg" src="img/i4.jpg" alt=""><div class="info">38, The Boulevard Hub, Pratham Circle<br>Adajan Gam, Pal, Surat 394510<br>+91 81549 14419</div></div>
+</div>
+
+<div id="search" aria-hidden="true">
+  <button class="ico" id="searchClose" aria-label="Close search"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+  <p class="eyebrow">Search the atelier</p>
+  <input id="q" type="search" placeholder="Chaniya choli, blouse, alteration…" autocomplete="off">
+  <div class="tags"><button>Chaniya Choli</button><button>Lehenga</button><button>Blouse</button><button>Navratri</button><button>Mirror work</button><button>Custom stitching</button><button>Alteration</button></div>
+  <div id="sres"></div>
+</div>
+
+<main id="top">
+<section class="hero wrap" style="padding-top:140px">
+  <div>
+    <p class="eyebrow">Designer Ethnic Wear · Bespoke Couture · Est. Surat</p>
+    <h1 style="margin-top:24px"><span class="ln"><span>Woven</span></span><span class="ln"><span>for your <em>story.</em></span></span></h1>
+    <p class="lead">Hand-finished chaniya cholis, lehengas and blouses — and garments stitched to your exact measure. From the atelier at Pal, Surat.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap"><a href="#collection" class="btn solid">Explore Collection</a><a href="#bespoke" class="btn">Design Your Own</a></div>
+    <div class="meta"><div><b>4.8★</b>Google rating</div><div><b>100%</b>Custom fit</div><div><b>5 days</b>Alterations</div></div>
+  </div>
+  <div class="heroimg" data-cursor="View">
+    <img src="img/i4.jpg" alt="Black embroidered lehenga">
+    <div class="badge"><svg viewBox="0 0 100 100"><defs><path id="c" d="M50 50m-38 0a38 38 0 1 1 76 0a38 38 0 1 1-76 0"/></defs><circle cx="50" cy="50" r="49" fill="#5e1420"/><text font-size="9.5" letter-spacing="3" fill="#f6f0e6"><textPath href="#c">MADE TO MEASURE ✦ HAND FINISHED ✦</textPath></text><text x="50" y="57" text-anchor="middle" font-size="20" fill="#d8b878" font-family="serif">श्री</text></svg></div>
+  </div>
+</section>
+
+<div class="marq"><div class="tr"><span>Chaniya Choli</span><span>Bridal Lehenga</span><span>Designer Blouses</span><span>Custom Stitching</span><span>Alterations</span><span>Navratri Edit</span><span>Chaniya Choli</span><span>Bridal Lehenga</span><span>Designer Blouses</span><span>Custom Stitching</span><span>Alterations</span><span>Navratri Edit</span></div></div>
+
+<section class="wrap intro">
+  <div class="side"><p class="eyebrow">The House</p><p>Every piece at Dhan श्री begins with a conversation — your occasion, your silhouette, your colour. Then our karigars take over.</p></div>
+  <p class="big" id="split">We don't just sell outfits. We cut, embroider and finish them around you — so that on your day, nothing else in the room fits quite like yours.</p>
+</section>
+
+<section class="wrap" id="collection" style="padding-top:0">
+  <div class="colhead">
+    <div><p class="eyebrow">The Collection · 2026</p><h2 style="margin-top:16px">The <em>Festive</em> Edit</h2></div>
+    <div class="filters" id="filters"><button class="on" data-f="all">All</button><button data-f="choli">Chaniya Choli</button><button data-f="lehenga">Lehenga</button><button data-f="blouse">Blouses</button></div>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="hz" id="lookbook">
+  <div class="track" id="track">
+    <div class="first"><p class="eyebrow">Lookbook — Navratri '26</p><h2 style="margin-top:20px">Nine nights,<br><em>nine stories.</em></h2><p>Mirror work, gota patti and hand-dyed bandhani — the season's most-requested pieces, styled at the atelier.</p></div>
+    <div class="slide"><img src="img/i6.jpg" alt=""><b>01</b><span>Kutch Garba</span></div>
+    <div class="slide"><img src="img/i10.jpg" alt=""><b>02</b><span>Gold Sequin</span></div>
+    <div class="slide"><img src="img/i8.jpg" alt=""><b>03</b><span>Emerald & Ivory</span></div>
+    <div class="slide"><img src="img/i9.jpg" alt=""><b>04</b><span>Halter Mirror</span></div>
+    <div class="slide"><img src="img/i5.jpg" alt=""><b>05</b><span>Sindoor Tier</span></div>
+    <div class="slide"><img src="img/i11.jpg" alt=""><b>06</b><span>White Rann</span></div>
+  </div>
+  <div class="progress"><i id="prog"></i></div>
+</section>
+
+<section class="bespoke" id="bespoke">
+  <div class="wrap bsgrid">
+    <div class="bsimg"><img src="img/i3.jpg" alt="Hand-embroidered blouse neckline"></div>
+    <div>
+      <p class="eyebrow">Bespoke Couture</p>
+      <h2 style="margin-top:20px">Made for <em>you,</em><br>only you.</h2>
+      <p style="color:var(--muted);line-height:1.8;margin-top:24px;max-width:460px">Bring a picture, a fabric, or just an idea. Our designer sketches it, our tailors cut it to your measurements, and you walk out in a garment no one else owns.</p>
+      <div class="steps">
+        <div class="step rv"><span class="n">01</span><div><h3>Consultation</h3><p>Sit with our designer — share the occasion, references from Pinterest or Instagram, your budget and timeline.</p></div></div>
+        <div class="step rv"><span class="n">02</span><div><h3>Fabric & Design</h3><p>Choose from our in-store fabrics or bring your own. We finalise neckline, sleeves, embroidery and flare.</p></div></div>
+        <div class="step rv"><span class="n">03</span><div><h3>Measure & Cut</h3><p>Over 20 precise measurements, taken in-store. Your pattern is drafted from scratch — never a standard size.</p></div></div>
+        <div class="step rv"><span class="n">04</span><div><h3>Trial & Finish</h3><p>A fitting trial before the final hand-finish, so it sits perfectly. Delivered pressed and ready to wear.</p></div></div>
+      </div>
+      <a href="#book" class="btn solid" style="margin-top:44px">Start a Custom Order</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap alt" id="alterations">
+  <p class="eyebrow" style="text-align:center">Alterations & Tailoring</p>
+  <h2 style="margin-top:20px">A second life<br>for <em>every</em> garment.</h2>
+  <p class="sub">Bought online and it doesn't fit? Mother's saree waiting to become a lehenga? Our in-house tailors fix, refit and reinvent — wherever you bought it.</p>
+  <div class="svc">
+    <div class="rv"><i>01</i><h3>Blouse Fitting</h3><p>Re-sizing, padding, neckline and sleeve changes for a flawless blouse fit.</p></div>
+    <div class="rv"><i>02</i><h3>Lehenga Resizing</h3><p>Waist, length and can-can adjustments — let out or taken in, without losing the flare.</p></div>
+    <div class="rv"><i>03</i><h3>Saree to Outfit</h3><p>Turn heirloom sarees into lehengas, kurtas or gowns — memories, re-tailored.</p></div>
+    <div class="rv"><i>04</i><h3>Fall, Pico & Finishing</h3><p>Saree fall-pico, hemming, borders, latkans and tassels finished by hand.</p></div>
+    <div class="rv"><i>05</i><h3>Embroidery Add-ons</h3><p>Mirror work, gota patti, sequins and patches added to plain pieces.</p></div>
+    <div class="rv"><i>06</i><h3>Express Service</h3><p>Function tomorrow? Ask about same-week urgent alterations.</p></div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap in">
+    <div><p class="eyebrow" style="color:var(--gold2)">Book an Appointment</p><h2 style="margin-top:20px">Your fitting,<br><em>reserved.</em></h2><p>Tell us what you need — we'll confirm your slot on WhatsApp within the hour during store hours.</p></div>
+    <form id="bf">
+      <div class="f"><input id="fn" placeholder=" " required><label for="fn">Your name</label></div>
+      <div class="f"><input id="fd" type="date" required><label class="fixed" for="fd">Preferred date</label></div>
+      <div class="f"><label class="fixed">I'm looking for</label>
+        <div class="chips" style="padding-top:22px">
+          <input type="radio" name="s" id="s1" value="Custom stitching" checked><label for="s1">Custom stitching</label>
+          <input type="radio" name="s" id="s2" value="Alteration"><label for="s2">Alteration</label>
+          <input type="radio" name="s" id="s3" value="Ready-to-wear shopping"><label for="s3">Shopping</label>
+          <input type="radio" name="s" id="s4" value="Bridal consultation"><label for="s4">Bridal</label>
+        </div></div>
+      <div class="f"><textarea id="fm" rows="2" placeholder=" "></textarea><label for="fm">Details (optional)</label></div>
+      <button class="btn" type="submit">Confirm on WhatsApp →</button>
+    </form>
+  </div>
+</section>
+
+<section class="wrap rev">
+  <p class="stars">★★★★★</p>
+  <blockquote>“Lehenga sundar hai — the fitting was perfect and the quality is lovely. Will definitely come back for Diwali.”</blockquote>
+  <p class="eyebrow">Preeti Yadav · Happy client</p>
+</section>
+
+<section class="wrap visit" id="visit" style="padding-top:0">
+  <div>
+    <p class="eyebrow">Visit the Atelier</p>
+    <h2 style="margin-top:20px">Come in,<br><em>try it on.</em></h2>
+    <dl>
+      <div><dt>Address</dt><dd>38, The Boulevard Hub, Pratham Circle,<br>Adajan Gam, Pal, Surat 394510</dd></div>
+      <div><dt>Call / WhatsApp</dt><dd><a href="tel:+918154914419">+91 81549 14419</a></dd></div>
+      <div><dt>Follow</dt><dd><a href="https://www.instagram.com/dhan__boutique/" target="_blank" rel="noopener">@dhan__boutique</a></dd></div>
+    </dl>
+  </div>
+  <div class="map"><iframe loading="lazy" title="Map" src="https://www.google.com/maps?q=The+Boulevard+Hub+Pratham+Circle+Pal+Surat&output=embed"></iframe></div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="huge">Dhan <em>श्री</em></div>
+    <div class="row"><span>© 2026 Dhan श्री Boutique, Surat</span><span>Designer Ethnic · Bespoke · Alterations</span><a href="#top">Back to top ↑</a></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/918154914419?text=Hi%20Dhan%20Shri%20Boutique%2C%20I%27d%20like%20to%20know%20more" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
+
+<div id="pm"><div class="box"><div class="im"><img id="pmImg" alt=""></div><div class="tx"><button class="ico x" id="pmX" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></svg></button><p class="eyebrow" id="pmCat"></p><h3 id="pmName"></h3><p id="pmDesc"></p><ul><li>Customisable size, colour & sleeves</li><li>In-store trial available</li><li>Price on request · varies with customisation</li></ul><a id="pmWa" class="btn solid" target="_blank" rel="noopener">Enquire on WhatsApp</a></div></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+const P=[
+ {n:"Noir Ghunghroo Lehenga",c:"lehenga",i:4,t:"Bestseller",d:"Jet-black flared lehenga with a hand-embroidered bodice and hanging tassel work. Made to your measure."},
+ {n:"Kutch Garba Chaniya",c:"choli",i:6,t:"Navratri",d:"Multi-panel Kutchi patchwork with mirror embroidery and a full 9-metre flare that spins beautifully."},
+ {n:"Gold Sequin Blouse",c:"blouse",i:10,t:"New",d:"All-over gold sequin blouse with a sculpted neckline — pair with any lehenga or saree."},
+ {n:"Emerald & Ivory Set",c:"choli",i:8,t:"Festive",d:"Embroidered emerald blouse with an ivory silver-border chaniya and a contrast dupatta."},
+ {n:"Halter Mirror Choli",c:"choli",i:9,t:"Trending",d:"Mirror-work halter choli with a maroon waistband and a crisp ivory flared skirt."},
+ {n:"Sindoor Tiered Skirt",c:"lehenga",i:5,t:"Colour Story",d:"Vermilion multi-tier skirt with soft gathers — lightweight, and can be dyed to any shade."},
+ {n:"Antique Zari Neckline",c:"blouse",i:3,t:"Hand-work",d:"Black blouse with a deep V antique zari, bead and stone border, finished by hand."},
+ {n:"White Rann Chaniya",c:"choli",i:11,t:"Navratri",d:"Ivory chaniya with colourful Kutch motifs and a mirror-studded crop blouse."}
+];
+const wa=t=>"https://wa.me/918154914419?text="+encodeURIComponent(t);
+const card=(p,k)=>`<article class="card rv" data-c="${p.c}" data-k="${k}" data-cursor="View"><div class="im"><img src="img/i${p.i}.jpg" alt="${p.n}" loading="lazy"><span class="tag">${p.t}</span><div class="q">Quick view</div></div><h3>${p.n}</h3><small>${{choli:"Chaniya Choli",lehenga:"Lehenga",blouse:"Blouse"}[p.c]} · Made to measure</small></article>`;
+grid.innerHTML=P.map(card).join("");
+
+// filters
+filters.onclick=e=>{const b=e.target.closest("button");if(!b)return;
+ filters.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));
+ grid.querySelectorAll(".card").forEach(c=>c.classList.toggle("hid",b.dataset.f!=="all"&&c.dataset.c!==b.dataset.f));
+ ScrollTrigger.refresh()};
+
+// product modal
+const pm=document.getElementById("pm");
+function openP(k){const p=P[k];pmImg.src=`img/i${p.i}.jpg`;pmName.textContent=p.n;pmCat.textContent=p.t;pmDesc.textContent=p.d;pmWa.href=wa(`Hi! I'm interested in the "${p.n}" from your website. Could you share details?`);pm.classList.add("open")}
+grid.onclick=e=>{const c=e.target.closest(".card");if(c)openP(+c.dataset.k)};
+pmX.onclick=()=>pm.classList.remove("open");pm.onclick=e=>{if(e.target===pm)pm.classList.remove("open")};
+
+// lenis + gsap
+gsap.registerPlugin(ScrollTrigger);
+const lenis=new Lenis({lerp:.09});lenis.on("scroll",ScrollTrigger.update);
+gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener("click",e=>{const t=document.querySelector(a.getAttribute("href"));if(!t)return;e.preventDefault();closeAll();lenis.scrollTo(t,{offset:a.getAttribute("href")==="#top"?0:-20,duration:1.6})}));
+
+// overlays (lock via lenis, reset on bfcache restore)
+const menu=document.getElementById("menu"),search=document.getElementById("search");
+function lock(on){on?lenis.stop():lenis.start()}
+function closeAll(){menu.classList.remove("open");search.classList.remove("open");pm.classList.remove("open");lock(false)}
+mOpen.onclick=()=>{menu.classList.add("open");lock(true);gsap.fromTo("#menu nav a",{opacity:0,y:40},{opacity:1,y:0,stagger:.06,delay:.35,duration:.8,ease:"power3.out"})};
+menuClose.onclick=closeAll;
+menu.querySelectorAll("nav a").forEach(a=>a.addEventListener("mouseenter",()=>{mImg.style.opacity=0;setTimeout(()=>{mImg.src=a.dataset.img;mImg.style.opacity=.85},200)}));
+sOpen.onclick=()=>{search.classList.add("open");lock(true);setTimeout(()=>q.focus(),300);runSearch("")};
+searchClose.onclick=closeAll;
+addEventListener("keydown",e=>{if(e.key==="Escape")closeAll();if(e.key==="/"&&document.activeElement.tagName!=="INPUT"&&document.activeElement.tagName!=="TEXTAREA"){e.preventDefault();sOpen.click()}});
+addEventListener("pageshow",closeAll);
+
+// search
+const SV=[{n:"Custom Stitching",c:"Bespoke service",i:3,h:"#bespoke",k:"custom stitching tailor design made to measure bespoke"},{n:"Alterations",c:"Tailoring service",i:8,h:"#alterations",k:"alteration fitting resize blouse lehenga saree fall pico"}];
+function runSearch(v){v=v.toLowerCase().trim();
+ const pr=P.map((p,k)=>({...p,k})).filter(p=>!v||(p.n+" "+p.c+" "+p.t+" "+p.d+(p.c==="choli"?" chaniya choli navratri garba":"")).toLowerCase().includes(v));
+ const sv=SV.filter(s=>v&&(s.n+" "+s.k).toLowerCase().includes(v));
+ sres.innerHTML=sv.map(s=>`<a href="${s.h}"><div class="im"><img src="img/i${s.i}.jpg" alt=""></div><p>${s.n}</p><small>${s.c}</small></a>`).join("")+pr.map(p=>`<a href="#" data-k="${p.k}"><div class="im"><img src="img/i${p.i}.jpg" alt=""></div><p>${p.n}</p><small>${p.t}</small></a>`).join("")||`<p style="font-family:var(--serif);font-size:26px">Can't find it? <a href="${wa("Hi! I'm looking for: "+v)}" target="_blank" style="color:var(--maroon);font-style:italic">We can make it for you →</a></p>`;
+ sres.querySelectorAll("a").forEach(a=>a.addEventListener("click",e=>{if(a.dataset.k!==undefined){e.preventDefault();search.classList.remove("open");openP(+a.dataset.k)}else{e.preventDefault();closeAll();lenis.scrollTo(a.getAttribute("href"),{offset:-20})}}))}
+q.oninput=()=>runSearch(q.value);
+search.querySelectorAll(".tags button").forEach(b=>b.onclick=()=>{q.value=b.textContent;runSearch(q.value)});
+
+// booking -> whatsapp
+fd.min=new Date().toISOString().slice(0,10);
+bf.onsubmit=e=>{e.preventDefault();const s=bf.querySelector("input[name=s]:checked").value;
+ open(wa(`Hi Dhan Shri Boutique! I'd like to book an appointment.\nName: ${fn.value}\nDate: ${fd.value}\nFor: ${s}\n${fm.value?"Details: "+fm.value:""}`),"_blank")};
+
+// cursor
+const cur=document.getElementById("cur");let mx=0,my=0;
+addEventListener("mousemove",e=>{mx=e.clientX;my=e.clientY;gsap.to(cur,{x:mx,y:my,duration:.35,ease:"power3"});
+ const t=e.target.closest("[data-cursor]");cur.classList.toggle("big",!!t);cur.textContent=t?t.dataset.cursor:""});
+
+// header hide on scroll down
+let ly=0;lenis.on("scroll",({scroll})=>{hd.classList.toggle("scrolled",scroll>40);hd.classList.toggle("hide",scroll>ly&&scroll>400);ly=scroll});
+
+// split text for intro
+split.innerHTML=split.textContent.split(" ").map(w=>`<span class="w">${w}</span>`).join(" ");
+gsap.to("#split .w",{opacity:1,stagger:.05,ease:"none",scrollTrigger:{trigger:"#split",start:"top 80%",end:"bottom 45%",scrub:true}});
+
+// preloader -> hero intro
+let c={v:0};
+gsap.timeline()
+ .to("#pre .mark span",{y:0,stagger:.12,duration:1,ease:"power4.out"})
+ .to(c,{v:100,duration:1.4,ease:"power2.inOut",onUpdate:()=>{document.querySelector("#pre .count").textContent=String(Math.round(c.v)).padStart(3,"0");document.querySelector("#pre .bar").style.width=c.v+"%"}},0)
+ .to("#pre",{yPercent:-100,duration:1.1,ease:"expo.inOut"},"+=.15")
+ .to(".hero h1 .ln>span",{y:0,stagger:.12,duration:1.2,ease:"power4.out"},"-=.5")
+ .to(".heroimg",{clipPath:"inset(0% 0 0 0)",duration:1.4,ease:"expo.out"},"<")
+ .to(".heroimg img",{scale:1,duration:1.8,ease:"expo.out"},"<")
+ .from(".hero .eyebrow,.hero .lead,.hero .btn,.hero .meta",{opacity:0,y:30,stagger:.08,duration:.9},"-=1.2");
+
+// reveals
+ScrollTrigger.batch(".rv",{start:"top 88%",onEnter:b=>gsap.to(b,{opacity:1,y:0,stagger:.1,duration:1.1,ease:"power3.out"})});
+gsap.utils.toArray("section h2").forEach(h=>gsap.from(h,{y:60,opacity:0,duration:1.2,ease:"power3.out",scrollTrigger:{trigger:h,start:"top 88%"}}));
+gsap.to(".bsimg img",{yPercent:-12,scale:1.15,ease:"none",scrollTrigger:{trigger:".bespoke",scrub:true}});
+
+// horizontal lookbook
+const track=document.getElementById("track");
+const dist=()=>track.scrollWidth-innerWidth;
+gsap.to(track,{x:()=>-dist(),ease:"none",scrollTrigger:{trigger:".hz",pin:true,scrub:1,end:()=>"+="+dist(),invalidateOnRefresh:true,onUpdate:s=>prog.style.width=s.progress*100+"%"}});
+gsap.utils.toArray(".hz .slide img").forEach(i=>gsap.to(i,{scale:1,ease:"none",scrollTrigger:{trigger:".hz",scrub:true,start:"top top",end:()=>"+="+dist()}}));
+</script>
+</body>
+</html>
