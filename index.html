@@ -108,7 +108,7 @@ header.hide{transform:translateY(-110%)}
 .hrow .rot span{display:block}
 .hrow .ctas{display:flex;gap:10px;flex-wrap:wrap}
 .hfade{opacity:0;transform:translateY(24px)}
-.scrollcue{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);width:120px;height:120px;pointer-events:none;opacity:0}
+.scrollcue{position:absolute;z-index:3;right:clamp(16px,4vw,64px);top:120px;width:120px;height:120px;pointer-events:none;opacity:0}
 .scrollcue svg{animation:spin 16s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 @media(max-width:800px){.cols{grid-template-columns:1fr 1fr}.col:nth-child(3){display:none}.col:nth-child(2){border-radius:0}.hrow .rot{display:none}}
@@ -315,7 +315,7 @@ footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;p
   </div>
   <div class="scrollcue"><svg viewBox="0 0 100 100"><defs><path id="c" d="M50 50m-40 0a40 40 0 1 1 80 0a40 40 0 1 1-80 0"/></defs><text font-size="9" letter-spacing="3.4" fill="#e2c48b"><textPath href="#c">SCROLL TO EXPLORE ✦ SCROLL TO EXPLORE ✦</textPath></text><path d="M50 40v20m-6-6 6 6 6-6" stroke="#e2c48b" fill="none"/></svg></div>
   <div class="htext"><div class="wrap">
-    <h1 id="ht"><span class="clip">Dhan</span> <span class="clip g">श्री</span></h1>
+    <h1 id="ht"><span class="clip">Dhan</span> <span class="clip g"><span class="ch">श्री</span></span></h1>
     <div class="hrow">
       <p class="hfade">Designer chaniya cholis, lehengas & blouses — and garments stitched to your exact measure, from our atelier in Pal, Surat.</p>
       <div class="rot hfade"><span id="rw">for your Navratri.</span></div>
@@ -522,7 +522,7 @@ document.querySelectorAll(".svc .row").forEach(r=>{r.addEventListener("mouseente
 let ly=0;lenis.on("scroll",({scroll})=>{hd.classList.toggle("scrolled",scroll>60);hd.classList.toggle("hide",scroll>ly&&scroll>500&&!menu.classList.contains("open"));ly=scroll});
 
 // split hero title into chars
-document.querySelectorAll("#ht .clip").forEach(s=>s.innerHTML=[...s.textContent].map(c=>`<span class="ch">${c}</span>`).join(""));
+document.querySelectorAll("#ht .clip:not(.g)").forEach(s=>s.innerHTML=[...s.textContent].map(c=>`<span class="ch">${c}</span>`).join(""));
 // intro words, *x* = gold italic
 split.innerHTML=split.textContent.split(" ").map(w=>w.startsWith("*")?`<span class="w k">${w.replace(/\*/g,"")}</span>`:`<span class="w">${w}</span>`).join(" ");
 
